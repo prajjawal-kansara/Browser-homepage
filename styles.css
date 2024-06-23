@@ -98,6 +98,8 @@
   #searchbox {
     display: flex;
     align-items: center;
+    height: 65px;
+    margin-left: 5px;
   }
   
   #searchbox > button {
@@ -132,6 +134,7 @@
   
   #searchbox > input {
     height: calc(1rem * 2);
+   
     flex: 1;
     color: #EEEEEE;
     background-color: transparent;
