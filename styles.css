@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('variables.css'); */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+}
+
+.showcase{
+    /* position: absolute; */
+    right: 0;
+    width: 100;
+    min-height: 100vh;
+    padding: 100px;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    z-index: 2;
+}
+
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.visually-hidden {
+    display: inline-block;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0px;
+    border: 0px none;
+  }
+
+  .jarvis {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 3rem;
+    right: 3rem;
+    margin: auto;
+    height: max-content;
+    max-width: 1300px;
+    display: flex;
+    opacity: 0.7;
+    color: #E0E0E0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(50px);
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .jarvis> img {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    display: block;
+    opacity: 0.5;
+  }
+  
+  .jarvis > main {
+    padding: 1.5rem;
+    flex: 1;
+    max-width: calc(100% - 350px);
+
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+
+    font-size: calc(1.05 * 1.5rem);
+    font-weight: 500;
+    margin: 0 0 1.5rem 0;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+  }
+
+  #searchbox {
+    display: flex;
+    align-items: center;
+  }
+  
+  #searchbox > button {
+    width: calc(1rem * 3);
+    height: calc(1rem * 3);
+    color: #FFFFFF;
+  
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #searchbox > button > .feather-search {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  
+  #searchbox > button:hover {
+    color: #EEEEEE;
+  }
+  
+  #searchbox > button:focus-visible {
+    color: #EEEEEE;
+    background: #222226;
+    outline: 0.125rem solid #969696;
+  }
+  
+  #searchbox > input {
+    height: calc(1rem * 2);
+    flex: 1;
+    color: #EEEEEE;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 0.125rem solid #BBBBBB;
+  }
+  
+  #searchbox > input:focus-visible {
+    border-color: #EEEEEE;
+  }
