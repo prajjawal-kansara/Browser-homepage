@@ -3,6 +3,7 @@ document.getElementById('search-input').addEventListener('keydown', function(eve
         const query = this.value;
         if (query) {
             window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+            this.value = ''; // Clear the input field
         }
     }
 });
