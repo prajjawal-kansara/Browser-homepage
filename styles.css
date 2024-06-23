@@ -7,14 +7,24 @@
     font-family: 'Poppins' , sans-serif;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #111;
+  color: #fff;
+  overflow: hidden;
+  margin: 0;
+}
+
+
 .showcase{
-    /* position: absolute; */
-    right: 0;
-    width: 100;
-    min-height: 100vh;
-    padding: 100px;
-    /* display: flex; */
-    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
     background-color: #111;
     z-index: 2;
@@ -52,21 +62,20 @@
   }
 
   .jarvis {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 3rem;
-    right: 3rem;
-    margin: auto;
-    height: 320px;
+    position: relative;
+    padding: 2rem;
+    width: 90%;
     max-width: 1150px;
+    height: 300px;
     display: flex;
-    opacity: 0.7;
+    align-items: center;
     color: #E0E0E0;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(50px);
+    opacity: 0.7;
     border-radius: 30px;
     overflow: hidden;
+    margin: auto;
   }
   
   .jarvis> img {
@@ -80,16 +89,12 @@
   .jarvis > main {
     padding: 1.5rem;
     flex: 1;
-    max-width: calc(100% - 350px);
-
     display: flex;
     flex-direction: column;
     color: #FFFFFF;
-
-    font-size: calc(1.05 * 1.5rem);
+    font-size: 1.5rem;
     font-weight: 500;
     margin: 0 0 1.5rem 0;
-
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow-x: hidden;
@@ -103,15 +108,13 @@
   }
   
   #searchbox > button {
-    width: calc(1rem * 3);
-    height: calc(1rem * 3);
+    width: 3rem;
+    height: 3rem;
     color: #FFFFFF;
-  
     cursor: pointer;
     background-color: transparent;
     border: none;
     outline: none;
-  
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -134,7 +137,6 @@
   
   #searchbox > input {
     height: calc(1rem * 2);
-   
     flex: 1;
     color: #EEEEEE;
     background-color: transparent;
@@ -146,3 +148,40 @@
   #searchbox > input:focus-visible {
     border-color: #EEEEEE;
   }
+
+    @media (max-width: 768px) {
+       .jarvis {
+           flex-direction: column;
+           padding: 1rem;
+           height: auto;
+       }
+   
+       .jarvis img {
+           display: block; /* Show on mobile */
+           height: 150px;
+           width: 150px;
+           margin-bottom: 1rem;
+       }
+   
+       .jarvis main {
+           width: 100%;
+           font-size: 1.2rem;
+       }
+   
+       #searchbox {
+           flex-direction: column;
+           width: 100%;
+           height: auto;
+           margin: 1rem 0 0 0;
+       }
+   
+       #searchbox input {
+           width: 100%;
+           margin-bottom: 0.5rem;
+       }
+   
+       #searchbox button {
+           width: 100%;
+           margin-top: 0.5rem;
+       }
+      }
