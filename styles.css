@@ -149,39 +149,46 @@ body {
     border-color: #EEEEEE;
   }
 
-    @media (max-width: 768px) {
-       .jarvis {
-           flex-direction: column;
-           padding: 1rem;
-           height: auto;
-       }
-   
-       .jarvis img {
-           display: block; /* Show on mobile */
-           height: 150px;
-           width: 150px;
-           margin-bottom: 1rem;
-       }
-   
-       .jarvis main {
-           width: 100%;
-           font-size: 1.2rem;
-       }
-   
-       #searchbox {
-           flex-direction: column;
-           width: 100%;
-           height: auto;
-           margin: 1rem 0 0 0;
-       }
-   
-       #searchbox input {
-           width: 100%;
-           margin-bottom: 0.5rem;
-       }
-   
-       #searchbox button {
-           width: 100%;
-           margin-top: 0.5rem;
-       }
-      }
+  @media (max-width: 768px) {
+    .jarvis {
+        width: 95%;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .jarvis img {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 1rem;
+    }
+
+    .jarvis main {
+        font-size: 1rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    #searchbox {
+        height: 50px;
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    #searchbox input {
+        height: 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    #searchbox button {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    #searchbox button .feather-search {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+}
