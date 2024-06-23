@@ -1,3 +1,5 @@
+document.getElementById('search-input').setAttribute('autocomplete', 'off');
+
 document.getElementById('search-input').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         const query = this.value;
@@ -13,5 +15,6 @@ document.getElementById('search-button').addEventListener('click', function() {
     const query = input.value;
     if (query) {
         window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+        input.value = ''; // Clear the input field
     }
 });
