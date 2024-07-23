@@ -1,194 +1,290 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins' , sans-serif;
-}
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins', sans-serif;
+ }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #111;
-  color: #fff;
-  overflow: hidden;
-  margin: 0;
-}
+ body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background-color: #111;
+   color: #fff;
+   overflow: hidden;
+ }
 
+ .showcase {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #111;
+   z-index: 2;
+ }
 
-.showcase{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #111;
-    z-index: 2;
-}
+ .showcase video {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   opacity: 0.8;
+ }
 
-.showcase video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
-}
+ .overlay {
+   position: absolute;
+   inset: 0;
+   background: rgba(0, 0, 0, 0.3);
+ }
 
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.3);
-}
+ .visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   padding: 0;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   border: 0;
+ }
 
-.visually-hidden {
-    display: inline-block;
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0px, 0px, 0px, 0px);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0px;
-    border: 0px none;
-  }
+ .jarvis {
+   position: relative;
+   padding: 2rem;
+   width: 90%;
+   max-width: 1150px;
+   height: 300px;
+   display: flex;
+   align-items: center;
+   color: #E0E0E0;
+   background-color: rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(50px);
+   opacity: 0.7;
+   border-radius: 30px;
+   overflow: hidden;
+   margin: auto;
+ }
 
-  .jarvis {
-    position: relative;
-    padding: 2rem;
-    width: 90%;
-    max-width: 1150px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    color: #E0E0E0;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(50px);
-    opacity: 0.7;
-    border-radius: 30px;
-    overflow: hidden;
-    margin: auto;
-  }
-  
-  .jarvis> img {
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    display: block;
-    opacity: 0.5;
-  }
-  
-  .jarvis > main {
-    padding: 1.5rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin: 0 0 1.5rem 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow-x: hidden;
-  }
+ .jarvis>img {
+   height: 300px;
+   width: 300px;
+   object-fit: cover;
+   opacity: 0.5;
+ }
 
-  #searchbox {
-    display: flex;
-    align-items: center;
-    height: 65px;
-    margin-left: 5px;
-  }
-  
-  #searchbox > button {
-    width: 3rem;
-    height: 3rem;
-    color: #FFFFFF;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  #searchbox > button > .feather-search {
-    width: 1.2rem;
-    height: 1.2rem;
-  }
-  
-  #searchbox > button:hover {
-    color: #EEEEEE;
-  }
-  
-  #searchbox > button:focus-visible {
-    color: #EEEEEE;
-    background: #222226;
-    outline: 0.125rem solid #969696;
-  }
-  
-  #searchbox > input {
-    height: calc(1rem * 2);
-    flex: 1;
-    color: #EEEEEE;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    border-bottom: 0.125rem solid #BBBBBB;
-  }
-  
-  #searchbox > input:focus-visible {
-    border-color: #EEEEEE;
-  }
+ .jarvis>main {
+   padding: 1.5rem;
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   color: #FFF;
+   font-size: 1.5rem;
+   font-weight: 500;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow-x: hidden;
+ }
 
-  @media (max-width: 768px) {
-    .jarvis {
-        width: 95%;
-        padding: 1rem;
-        flex-direction: column;
-        align-items: center;
-    }
+ #searchbox {
+   display: flex;
+   align-items: center;
+   height: 30px;
+   margin-left: 3px;
+ }
 
-    .jarvis img {
-        height: 100px;
-        width: 100px;
-        margin-bottom: 1rem;
-    }
+ #searchbox>button {
+   width: 3rem;
+   height: 10px;
+   color: #FFF;
+   cursor: pointer;
+   background-color: transparent;
+   border: none;
+   outline: none;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+ }
 
-    .jarvis main {
-        font-size: 1rem;
-        padding: 0.5rem;
-        text-align: center;
-    }
+ #searchbox>button>.feather-search {
+   width: 1.2rem;
+   height: 1.2rem;
+ }
 
-    #searchbox {
-        height: 50px;
-        margin-left: 0;
-        width: 100%;
-        justify-content: center;
-        margin-top: 1rem;
-    }
+ #searchbox>button:hover,
+ #searchbox>button:focus-visible {
+   color: #EEE;
+ }
 
-    #searchbox input {
-        height: 1.5rem;
-        font-size: 0.8rem;
-    }
+ #searchbox>button:focus-visible {
+   background: #222226;
+   outline: 0.125rem solid #969696;
+ }
 
-    #searchbox button {
-        width: 2rem;
-        height: 2rem;
-    }
+ #searchbox>input {
+   height: 2rem;
+   flex: 1;
+   color: #EEE;
+   background-color: transparent;
+   border: none;
+   border-bottom: 0.125rem solid #BBB;
+   margin: 5px 0;
+ }
 
-    #searchbox button .feather-search {
-        width: 0.8rem;
-        height: 0.8rem;
-    }
-}
+ #searchbox>input:focus-visible {
+   border-color: #EEE;
+ }
+
+ #bookmarks {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   margin-top: auto;
+ }
+
+ .bookmark-group {
+   width: 16.66%;
+   margin-top: 20px;
+ }
+
+ .bookmark-group>h2 {
+   color: #EEE;
+   font-size: 1rem;
+   font-weight: 500;
+ }
+
+ .bookmark-group>ul {
+   padding-right: 1rem;
+   height: 80px;
+ }
+
+ .bookmark-group>ul>li {
+   position: relative;
+   list-style: none;
+ }
+
+ .bookmark-group>ul>li>a {
+   display: block;
+   padding: 2px 0;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow-x: hidden;
+   width: 100%;
+   outline: none;
+   font-size: 0.8rem;
+   color: #969696;
+   text-decoration: none;
+ }
+
+ .bookmark-group>ul>li>a:hover::before,
+ .bookmark-group>ul>li>a:focus-visible::before {
+   content: "•";
+   position: absolute;
+   left: -0.75rem;
+ }
+
+ @media (max-width: 768px) {
+   .jarvis {
+     width: 95%;
+     padding: 1rem;
+     height: auto;
+     min-height: 200px;
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .jarvis>img {
+     height: 80px;
+     width: 80px;
+     margin-bottom: 0.5rem;
+   }
+
+   .jarvis>main {
+     font-size: 0.9rem;
+     padding: 0.5rem;
+     text-align: center;
+   }
+
+   #searchbox {
+     height: 40px;
+     margin-left: 0;
+     width: 100%;
+     justify-content: center;
+     margin-top: 0.5rem;
+   }
+
+   #searchbox input {
+     height: 1.5rem;
+     font-size: 0.8rem;
+   }
+
+   #searchbox button {
+     width: 1.5rem;
+     height: 1.5rem;
+   }
+
+   #searchbox button .feather-search {
+     width: 0.7rem;
+     height: 0.7rem;
+   }
+
+   .bookmark-group {
+     width: 50%;
+     margin-top: 10px;
+   }
+
+   .bookmark-group>h2 {
+     font-size: 0.8rem;
+   }
+
+   .bookmark-group>ul {
+     height: 60px;
+   }
+
+   .bookmark-group>ul>li>a {
+     font-size: 0.7rem;
+   }
+ }
+
+ @media (max-width: 480px) {
+   .jarvis {
+     width: 98%;
+     padding: 0.8rem;
+     min-height: 180px;
+   }
+
+   .jarvis>img {
+     height: 60px;
+     width: 60px;
+   }
+
+   .jarvis>main {
+     font-size: 0.8rem;
+     padding: 0.3rem;
+   }
+
+   #searchbox {
+     height: 35px;
+   }
+
+   #searchbox input {
+     height: 1.3rem;
+     font-size: 0.7rem;
+   }
+
+   .bookmark-group {
+     width: 100%;
+     margin-top: 5px;
+   }
+
+   .bookmark-group>ul {
+     height: 50px;
+   }
+ }
