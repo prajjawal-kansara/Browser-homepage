@@ -133,6 +133,7 @@
    color: #EEE;
    background-color: transparent;
    border: none;
+   outline: none;
    border-bottom: 0.125rem solid #BBB;
    margin: 5px 0;
  }
