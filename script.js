@@ -45,7 +45,7 @@ const bookmarks = [
         bookmarks: [
             { label: "ChatGPT", url: "https://chatgpt.com/" },
             { label: "Gemini", url: "https://gemini.google.com/app?hl=en-IN" },
-            { label: "Claud", url: "https://claude.ai/new" }
+            { label: "Claude", url: "https://claude.ai/new" }
         ]
     },
     {
