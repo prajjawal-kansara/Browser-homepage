@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #111;
+  color: #fff;
+  overflow: hidden;
+}
+
+.showcase {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  z-index: 2;
+}
+
+.showcase video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.quantum {
+  position: relative;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  height: 270px;
+  display: flex;
+  align-items: center;
+  color: #E0E0E0;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(50px);
+  opacity: 0.8;
+  border-radius: 10px;
+  overflow: hidden;
+  /* border: 1px solid rgba(255, 255, 255, 0.2); */
+}
+
+.quantum>img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.quantum>main {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+#searchbox {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+#searchbox>button {
+  height: 3rem;
+  color: #FFF;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#searchbox>button>.feather-search {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+#searchbox>button:hover,
+#searchbox>button:focus-visible {
+  color: #EEE;
+}
+
+#searchbox>button:focus-visible {
+  background: #222226;
+  outline: 0.125rem solid #969696;
+}
+
+#searchbox>input {
+  height: 2rem;
+  flex: 1;
+  color: #EEE;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin: 5px 0 0 5px;
+}
+
+#searchbox>input:focus-visible {
+  border-color: #EEE;
+}
+
+#bookmarks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.bookmark-group {
+  width: 16.66%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.bookmark-group>h2 {
+  color: #EEE;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.bookmark-group>ul {
+  height: 80px;
+}
+
+.bookmark-group>ul>li {
+  position: relative;
+  list-style: none;
+}
+
+.bookmark-group>ul>li>a {
+  display: block;
+  padding: 2px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+  width: 100%;
+  outline: none;
+  font-size: 0.8rem;
+  color: #969696;
+  text-decoration: none;
+}
+
+.bookmark-group>ul>li>a:hover::before,
+.bookmark-group>ul>li>a:focus-visible::before {
+  content: "•";
+  position: relative;
+  left: -0.35rem;
+}
+
+#weather-widget {
+  width: 100%;
+  text-align: left;
+  color: #EEE;
+}
+
+#weather-widget .weather-info {
+  font-size: 0.65rem;
+  color: #d1d1d1;
+}
+
+@media (max-width: 800px) {
+  .quantum {
+    width: 95%;
+    padding: 0.8rem;
+    height: 220px;
+    min-height: 200px;
+    border-radius: 20px;
+  }
+
+  .quantum>img {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 0.5rem;
+  }
+
+  .quantum>main {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  #searchbox {
+    height: 40px;
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  #searchbox input {
+    height: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  #searchbox button {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  #searchbox button .feather-search {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .bookmark-group {
+    margin-top: 10px;
+  }
+
+  .bookmark-group>h2 {
+    font-size: 0.8rem;
+  }
+
+  .bookmark-group>ul {
+    height: 80px;
+  }
+
+  .bookmark-group>ul>li>a {
+    font-size: 0.7rem;
+  }
+
+  #weather-widget .weather-info {
+    font-size: 0.5rem;
+  }
+}
