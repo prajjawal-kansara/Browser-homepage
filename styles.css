@@ -201,33 +201,30 @@ body {
   .quantum {
     width: 95%;
     padding: 0.8rem;
-    height: 220px;
+    height: 200px;
     min-height: 200px;
-    border-radius: 20px;
+    border-radius: 10px;
   }
 
   .quantum>img {
     height: 80px;
     width: 80px;
-    margin-bottom: 0.5rem;
   }
 
   .quantum>main {
-    font-size: 0.9rem;
-    padding: 0.5rem;
+    font-size: 0.4rem;
   }
 
   #searchbox {
     height: 40px;
-    margin-left: 0;
     width: 100%;
     justify-content: center;
-    margin-top: 0.5rem;
   }
 
   #searchbox input {
-    height: 1.5rem;
-    font-size: 0.8rem;
+    height: 1rem;
+    font-size: 0.7rem;
+    margin-top: 50px;
   }
 
   #searchbox button {
@@ -238,14 +235,15 @@ body {
   #searchbox button .feather-search {
     width: 0.7rem;
     height: 0.7rem;
+    margin-top: 50px;
   }
 
   .bookmark-group {
-    margin-top: 10px;
+    margin-top: 30px;
   }
 
   .bookmark-group>h2 {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 
   .bookmark-group>ul {
@@ -253,10 +251,12 @@ body {
   }
 
   .bookmark-group>ul>li>a {
-    font-size: 0.7rem;
+    font-size: 0.4rem;
   }
 
   #weather-widget .weather-info {
     font-size: 0.5rem;
+    /* margin-bottom: 10px; */
+    
   }
 }
